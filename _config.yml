@@ -1,0 +1,198 @@
+### Site settings
+remote_theme             : YoussefRaafatNasry/portfolYOU
+# Site Settings
+locale                   : "en-US"
+title                    : "Asonganyi Ateh Atayo"
+title_separator          : ""
+description              : ">-"
+baseurl                  : ""
+port                     : 4000
+host                     : "0.0.0.0"
+url                      : "https://aatayo.github.io"
+repository               : aatayo/aatayo.github.io
+masthead_title           : " "
+
+# Navbar Settings
+nav_exclude:     # The following paths are excluded from navbar
+  - pages/404.html
+  - pages/index.md
+
+# Site Author
+author:
+  name                   : "Asonganyi A. Atayo"
+# avatar                 : "/assets/images/avat.png"
+# bio                    : PhD Student at Wichita State University
+# location               : "Wichita, KS, USA"
+  email                  : aatayo@hotmail.com
+  github                 : aatayo
+  linkedin               : ateh-a-883357b5/
+  links:
+    - label              : "Email"
+      icon               : "fas fa-fw fa-envelope-square"
+      url                : "mailto:aatayo@hotmail.com"
+    - label              : "Website"
+      icon               : "fas fa-fw fa-link"
+      url                : #"https://aatayo.github.io"
+    - label              : "Linkedin"
+      icon               : "fab fa-fw fa-linkedin"
+      url                : "https://linkedin.com/in/ateh-a-883357b5/"
+    - label              : "Twitter"
+      icon               : "fab fa-fw fa-twitter-square"
+      url                : "https://twitter.com/Ateh_Atayo"
+    - label              : "GitHub"
+      icon               : "fab fa-fw fa-github"
+      icon               : "fab fa-fw fa-github"
+      url                : "https://github.com/aatayo"
+    - label              : "Gooogle Scholar"
+      icon               : "fab fa fa-graduation-cap"
+      url                : "https://scholar.google.com/citations?hl=en&user=wiHb1YEAAAAJ"
+
+# Site Footer
+footer:
+  links:
+    - label              : "Twitter"
+      icon               : "fab fa-fw fa-twitter-square"
+      url                : "https://twitter.com/Ateh_Atayo"
+    - label              : "GitHub"
+      icon               : "fab fa-fw fa-github"
+      url                : "https://github.com/aatayo"
+    - label              : "Linkedin"
+      icon               : "fab fa-fw fa-linkedin"
+      url                : "https://linkedin.com/in/ateh-a-883357b5/"
+
+
+keep_files:
+  - .git
+  - .svn
+encoding                 : "utf-8"
+markdown_ext             : "markdown,mkdown,mkdn,mkd,md"
+
+# Conversion
+markdown                 : kramdown
+highlighter              : rouge
+lsi                      : false
+excerpt_separator        : "\n\n"
+incremental              : false
+
+# Markdown Processing
+kramdown:
+  input                  : GFM
+  hard_wrap              : false
+  auto_ids               : true
+  footnote_nr            : 1
+  entity_output          : as_char
+  toc_levels             : 1..6
+  smart_quotes           : lsquo,rsquo,ldquo,rdquo
+  enable_coderay         : false
+
+# Sass/SCSS
+sass:
+  sass_dir               : _sass
+  style                  : compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+# Outputting
+permalink                : /:categories/:title/
+paginate                 : # 10 # amount of posts to show
+paginate_path            : # /page:num/
+toc                      : false
+atom_feed:
+    hide                 : true
+
+# Plugins
+plugins:
+  - jemoji
+
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-archives
+  - jekyll-sitemap
+
+# HTML Compression
+# - http://jch.penibelst.de/
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+    
+### Analytics ###
+analytics:
+  enabled: false                                        # Set true to enable analytics
+  google:
+    tracking_id: your-google-tracking-id
+
+# Defaults
+defaults:
+    # _posts
+    - scope:
+        path             : ""
+        type             : posts
+      values:
+        layout           : single
+        author_profile   : false
+        read_time        : false
+        comments         : false
+        share            : false
+        related          : false
+        mathjax          : false
+        show_date        : false
+        toc_sticky       : false
+        toc_label        : "CONTENTS"
+        
+    # projects
+    - scope:
+        path             : ""
+        type             : projects
+      values:
+        layout           : page
+
+    # _portfolio
+    - scope:
+        path             : ""
+        type             : portfolio
+      values:
+        layout           : single
+        author_profile   : true
+        share            : true
+
+collections:
+  portfolio:
+    output               : true
+    permalink            : /:collection/:path/
+  projects:
+    output               : true
+    permalink            : /projects/:name
+
+picture:
+  source                 : "assets/images" #"assets/images/_originals"
+  output                 : "assets/images"
+  markup                 : "picture"
+  presets:
+    hero:
+      attr:
+        class            : "page__hero-image"
+        itemprop         : "image"
+      ppi                : [1]
+      source_1600:
+        media            : "(min-width: 1600px)"
+        width            : "1600"
+      source_1024:
+        media            : "(min-width: 1024px)"
+        width            : "1024"
+      source_768:
+        media            : "(min-width: 768px)"
+        width            : "768"
+      source_600:
+        media            : "(min-width: 600px)"
+        width            : "600"
+      source_default:
+        width            : "320"
+
+
+
+
+
+
+
+
